@@ -8,6 +8,12 @@
     <StartupObject>ConsoleFighting.Game</StartupObject>
     <ApplicationIcon>Mage.ico</ApplicationIcon>
     <PlatformTarget>x86</PlatformTarget>
+	
+	<PublishSingleFile>true</PublishSingleFile>
+	<SelfContained>true</SelfContained>
+	<RuntimeIdentifier>win-x86</RuntimeIdentifier>
+	<PublishTrimmed>true</PublishTrimmed>
+	<TrimMode>Link</TrimMode>
   </PropertyGroup>
 
   <ItemGroup>
