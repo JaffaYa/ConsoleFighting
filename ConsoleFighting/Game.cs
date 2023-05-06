@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Diagnostics;
 using ConsoleFighting.Scenes;
 using ConsoleFighting.Characters;
 
@@ -9,9 +10,9 @@ namespace ConsoleFighting
     {
         static void Main(string[] args)
         {
-            Console.OutputEncoding = Encoding.UTF8;
-            //Console.WriteLine(Console.OutputEncoding);
+            //Debug.WriteLine("llala");
             //Console.ReadKey(true);
+            SetEcoding();
 
             MainMenu menuScene = Init();
             menuScene.Show();
@@ -59,6 +60,26 @@ namespace ConsoleFighting
 
 
             return false;
+        }
+
+        static void SetEcoding()
+        {
+            // check if UTF-8 is supported
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            Encoding utf8 = Encoding.GetEncoding("UTF-8");
+            Encoding defaultEncoding = Encoding.GetEncoding(1251);
+            Encoding consoleEncoding = Console.OutputEncoding;
+
+            if (consoleEncoding == utf8)
+            {
+                //Debug.WriteLine("llala");
+                //Console.WriteLine("UTF-8 is supported.");
+            }
+            else
+            {
+                Console.OutputEncoding = defaultEncoding;
+                //Console.WriteLine("UTF-8 is not supported. Switching to 1251.");
+            }
         }
 
         static bool Exit()
