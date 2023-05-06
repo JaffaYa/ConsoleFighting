@@ -6,12 +6,12 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <StartupObject>ConsoleFighting.Game</StartupObject>
-    <ApplicationIcon>Screenshot_1.ico</ApplicationIcon>
+    <ApplicationIcon>Mage.ico</ApplicationIcon>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Screenshot_1.ico" />
+    <Content Include="Mage.ico" />
   </ItemGroup>
 
 </Project>
