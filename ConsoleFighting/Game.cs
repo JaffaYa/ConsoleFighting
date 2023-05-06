@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 using ConsoleFighting.Scenes;
 using ConsoleFighting.Characters;
 
