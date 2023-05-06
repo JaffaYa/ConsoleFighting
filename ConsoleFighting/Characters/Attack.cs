@@ -16,7 +16,7 @@ namespace ConsoleFighting.Characters
 
         public static int CalScatter(int damage)
         {
-            int rand = Character._R.Next(-scatter, scatter);
+            int rand = Character._R.Next(-scatter, scatter + 1);
             //Console.WriteLine("scatter = {0}", rand);
             return (rand * damage) / 100 + damage;
         }
